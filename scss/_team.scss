@@ -1,0 +1,17 @@
+section.team {
+
+    text-align: center;
+
+    .member {
+        padding: 25px;
+        font-style: italic;
+
+        &:first-child { padding-left: 0; }
+        &:last-child { padding-right: 0; }
+
+        img {
+            border-radius: 100em;
+        }
+    }
+
+}

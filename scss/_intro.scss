@@ -1,0 +1,42 @@
+section.intro {
+
+    min-height: 640px;
+    background-size: cover;
+    background-image: url('../img/intro.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+
+    .text {
+
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+            font-style: italic;
+            &:after,
+            &:before {
+                content: "";
+                min-width: 100px;
+                display: inline-block;
+                height: 2px;
+                background-color: white;
+                margin: 7px 30px;
+            }
+        }
+
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 40px;
+        display: block;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+    }
+
+}

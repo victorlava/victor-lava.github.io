@@ -1,0 +1,5 @@
+section.intro {
+  min-height: 600px;
+  background-size: 100%;
+  background-image: url("img/intro.jpg");
+  background-position: center center; }

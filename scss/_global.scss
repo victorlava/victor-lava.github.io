@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-primary;
+    color: $color-secondary;
+    font-size: $font-size-base;
+    line-height: 24px;
+    letter-spacing: .5px;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: lighter;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    font-weight: lighter;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
+}
+
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}

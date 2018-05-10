@@ -1,0 +1,46 @@
+section.contact {
+    background-color: $color-primary;
+    padding: 22px 0 60px 0;
+    color: white;
+
+    .form {
+        width: 50%;
+        padding-right: 20px;
+
+        textarea {
+            height: 120px;
+        }
+
+
+        input,textarea, button {
+            border: 0;
+            outline: 0;
+            padding: 22px;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+            font-size: $font-size-h3;
+            font-family: $font-primary;
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        button {
+            background-color: $color-secondary;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    .map {
+        width: 50%;
+        padding-left: 20px;
+        font-size: $font-size-h3;
+        text-align: center;
+        line-height: 1.7;
+    }
+}

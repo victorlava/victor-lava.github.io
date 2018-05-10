@@ -1,0 +1,48 @@
+section.carousel {
+    background-color: #f4f4f4;
+    padding: 32px 0;
+
+    .flex {
+        justify-content: space-between;
+    }
+
+    .feed {
+        margin-bottom: 50px;
+
+        .instagram {
+            height: 192px;
+            background: white;
+            padding: 6px;
+            border-radius: 4px;
+            border-bottom: 1px solid #dcdcdc;
+            position: relative;
+
+            &:hover {
+
+                &:after {
+                    content: "\f16d";
+                    font-family: "Font Awesome 5 Brands";
+                    text-align: center;
+                    line-height: 192px;
+                    font-size: 40px;
+                    color: white;
+                    display: block;
+                    width: calc(100% - 12px);
+                    height: calc(100% - 12px);
+                    top: 6px;
+                    left: 6px;
+                    background-color: rgba(197, 48, 98, 0.85);
+                    position: absolute;
+                }
+
+            }
+
+            img {
+                height: 100%;
+
+
+            }
+        }
+    }
+
+}

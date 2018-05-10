@@ -1,0 +1,29 @@
+
+@mixin max-width($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin border-radius($tl_radius, $tr_radius, $bl_radius, $br_radius) {
+    border-top-left-radius: $tl_radius;
+    border-top-right-radius: $tr_radius;
+    border-bottom-left-radius: $bl_radius;
+    border-bottom-right-radius: $br_radius;
+}
+
+
+@mixin placeholders($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+}

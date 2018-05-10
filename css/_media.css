@@ -1,0 +1,8 @@
+@media (max-width: 1440px) {
+  h1 {
+    font-size: 28px; }
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }

@@ -1,0 +1,13 @@
+.title {
+    text-align: center;
+    padding: 28px 0 40px 0;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100px;
+        margin: 0 auto;
+        background-color: #dcdcdc;
+    }
+}

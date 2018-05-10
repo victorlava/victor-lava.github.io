@@ -1,0 +1,32 @@
+$sm: 516px;
+$md: 721px;
+$lg: 791px;
+
+$pink: #c53062;
+$grey: #333;
+
+$color-primary: $pink;
+$color-secondary: $grey;
+
+$font-primary: "Libre Baskerville", serif;
+$font-secondary: "Sintony", sans-serif;
+
+$font-size-base: 14px;
+$font-size-h1: $font-size-base * 3.42;
+$font-size-h2: $font-size-base * 2.57;
+$font-size-h3: $font-size-base * 1.42;
+$font-size-h4: $font-size-base * 1.28;
+
+
+@import '_mixins';
+@import '_global';
+@import '_helpers';
+@import '_navigation';
+@import '_intro';
+@import '_team';
+@import '_carousel';
+@import '_contact';
+@import '_title';
+@import '_button';
+@import '_footer';
+@import '_media';
