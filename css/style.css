@@ -42,6 +42,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+.small {
+  max-height: 150px; }
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,6 +147,10 @@ section.team {
 section.carousel {
   background-color: #f4f4f4;
   padding: 32px 0; }
+  section.carousel button {
+    border: 0;
+    margin-left: 15px;
+    margin-right: 15px; }
   section.carousel .flex {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;

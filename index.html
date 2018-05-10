@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
@@ -42,7 +46,7 @@
                     <h1>Premium Quality & Tradition</h1>
                     <h3>Since 1978</h3>
                 </div>
-                <a href="#" class="arrow">
+                <a href="#" id="js-scroll" class="arrow">
                     <i class="fas fa-chevron-down"></i>
                 </a>
             </section>
@@ -54,16 +58,19 @@
                     </div>
                     <div class="flex">
                         <div class="member">
+                            <i class="far fa-times-circle fa-2x"></i>
                             <img src="img/person-1.jpg" alt="Person">
                             <h4>Dennis Kim</h4>
                             <p>In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew.</p>
                         </div>
                         <div class="member">
+                            <i class="far fa-times-circle fa-2x"></i>
                             <img src="img/person-2.jpg" alt="Person">
                             <h4>Sara McGoy</h4>
                             <p>In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew.</p>
                         </div>
                         <div class="member">
+                            <i class="far fa-times-circle fa-2x"></i>
                             <img src="img/person-3.jpg" alt="Person">
                             <h4>Emily Porter</h4>
                             <p>In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew.</p>
@@ -75,16 +82,16 @@
             <section class="carousel">
                 <div class="container">
                     <div class="feed flex">
-                        <div class="instagram">
+                        <div class="instagram hidden">
                             <img src="img/instagram-1.jpg" alt="">
                         </div>
-                        <div class="instagram">
+                        <div class="instagram hidden">
                             <img src="img/instagram-2.jpg" alt="">
                         </div>
-                        <div class="instagram">
+                        <div class="instagram hidden">
                             <img src="img/instagram-3.jpg" alt="">
                         </div>
-                        <div class="instagram">
+                        <div class="instagram hidden">
                             <img src="img/instagram-4.jpg" alt="">
                         </div>
                     </div>
@@ -94,6 +101,11 @@
                             <i class="fab fa-instagram"></i>
                             <span>Follow us on instagram</span>
                         </a>
+
+                        <button id="follow" class="button">
+                            <i class="fas fa-search-minus"></i>
+                            <span>Make small</span>
+                        </button>
                     </div>
 
                 </div>
@@ -105,7 +117,7 @@
                 </div>
                 <div class="container flex">
                     <div class="form">
-                        <form>
+                        <form id="contact-form">
                             <input type="text" name="name" placeholder="Full name">
                             <input type="text" name="email" placeholder="E-mail">
                             <textarea name="message" placeholder="Message"></textarea>

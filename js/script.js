@@ -1,114 +1,96 @@
 'use strict';
+var clickCounter = 0;
+
+/* Tasks:
+*  1. Paspaudus ant navigacijos linku jie turi likti "active"
+*     būsenoje, t.y pabraukti. TIP: panaudoti "this" žodį.
+*
+*  2. Paspaudus ant baltos rodyklės rožinėje sekcijoje,
+*     ekranas turi gražiai pasislinkit iki "team" sekcijos
+*
+*  3. Pridėti įkonėlę far fa-times-circle fa-2x prie kiekvieno žmogaus
+*     Paspaudus ant jos turi gražiai pradinkit
+*     žmogaus nuotrauka kartu su tekstu.
+*     TIP: panaudoti "this" ir animate metodą
+*
+*  4. Susikurti mygtuką "Make small" šali "Follow on instagram" mygtuko.
+*     Susikurti klasę .small CSS'e, ji turi pamažinti instagramo nuotraukų aukštį.
+*     Paspaudus ant mygtuko "Make small", reikia uždėti klasę .small ant nuotraukų.
+*     Jei vartotojas paspaudžia dar kartą ant to mygtuko, tai nuotraukos turi padidėti atgal.
+*     TIP: panaudoti toggleClass metodą
+*
+***  5. (EXTRA) Kai forma yra išsiunčiama paslėpti gražiai visą section.contact sekciją.
+*               Kai animacija pasibaigia reikia ištrinti visą section.contact, jog ji
+*               neužimtų vietos ir nesugadintų dizaino.
+*
+*    TIP: Panaudoti formos "submit" įvykį, animate funkciją
+*
+***   6. (EXTRA) Patobulinti 3. užduotį. Kai visi elementai yra paslėpti ištrinti visą
+*              section.team sekciją, naudoti control flow(if/else), kintamuosius, sekti
+*   kiek elementų buvo uždaryta, jei buvo uždaryti visi tai animuoti paslėpimą.
+*
+*/
 
 
+$(document).ready(function() {
 
-window.onload = function() {
+    // 1.
+    $('.navigation li').on('click', function() {
+        $('.navigation li').removeClass('active');
+        $(this).addClass('active');
+    });
 
-    let navigation = document.querySelector('.navigation-top'), // Vienam elementui
-        liActive = navigation.querySelector('li.active');
+    // 2.
+    $("#js-scroll").on('click', function() {
+        $('html, body').animate({
+            scrollTop: $(".team").offset().top
+        }, 1000);
+    });
 
-        window.onresize = function() {
+    // 3.
+    $('.member i').on('click', function() {
+        // 6.
+        clickCounter++;
 
-            console.log(window.screen.width);
+        let memberCount = $('.member').length;
 
-            if(window.screen.width < 300) {
-                navigation.classList.add('animated');
-                navigation.classList.add('fadeOut');
-            }
-            else {
-                navigation.classList.add('fadeIn')
-                navigation.classList.remove('fadeOut');
-            }
-
+        if(memberCount == clickCounter) {
+            $('section.team').animate({
+                height: 0,
+                opacity: 0,
+                padding: 0
+            }, 1000, function() {
+                $(this).remove();
+            })
         }
+        // end of 6.
+
+        $(this).parent().animate({
+            opacity: 0
+        }, 500, function() {
+            $(this).addClass('hidden');
+        });
 
 
-        // liActive.classList.add('test');
-    // console.log();
-    // var navigation = document.querySelectorAll('.navigation'); // Elementams
+    });
 
-}
+    // 4.
+    $('#follow').on('click', function() {
+        $('.instagram').toggleClass('small');
+    })
 
+    // 5.
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
 
-//
-// window.onresize = function() {
-//
-//     // console.log('width:' + window.screen.width);
-//     // console.log('height:' + window.screen.height);
-//     //
-//     // if(window.screen.height < 200) {
-//     //     alert('per mazas ekranas');
-//     // }
-//
-//
-//     if (window.matchMedia("(min-width: 600px)").matches) {
-//       /* the viewport is at least 600 pixels wide */
-//       console.log('daugiau nei 600px');
-//     } else {
-//         console.log('mazesnis nei 600px');
-//       /* the viewport is less than 400 pixels wide */
-//     }
-// }
+        $('section.contact').animate({
+            height: 0,
+            opacity: 0,
+            padding: 0
+        }, 1000, function() {
+            $(this).remove();
+        })
 
-//
-// window.onscroll = function() {
-//
-//
-//     console.log('scrollinu');
-//
-//
-// }
+    });
 
-
-//
-//
-// //
-//
-// if(vardas == 'viktoras') { // false
-//     alert('viktoras');
-//
-// }
-// else if(vardas == 'dovydas') {
-//     alert('dovydas');
-// }
-// else if(vardas == 'tomas') {
-//     alert('tomas');
-// }
-// else {
-//     alert('tuscia');
-// }
-//
-// // switch (vardas) {
-// //     case 'viktoras':
-// //         alert('viktoras');
-// //
-// //         // break;
-// //     case 'dovydas':
-// //         alert('dovydas');
-// //         // break;
-// //     case 'tomas':
-// //         alert('tomas');
-// //         break;
-// //     default:
-// //     alert('tuscia');
-// //
-// // }
-//
-//
-// // function atspausdink(tekstas) {
-// //     console.log(tekstas);
-// //     alert(tekstas);
-// //
-// //     return 'viktoras';
-// // }
-// //
-// //     var vardas = atspausdink();
-//
-//
-// // var test = 'sdfsdwerwer';
-//
-// // console.log(vardas);
-// //
-// // atspausdink('tekstas 2');
-// // atspausdink('2');
-// // atspausdink('5');
+});
