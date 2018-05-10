@@ -52,7 +52,7 @@ $(document).ready(function() {
         // 6.
         clickCounter++;
 
-        let memberCount = $('.member').length;
+        var memberCount = $('.member').length;
 
         if(memberCount == clickCounter) {
             $('section.team').animate({
