@@ -54,10 +54,20 @@ ul {
   font-family: "Sintony", sans-serif;
   padding: 24px;
   z-index: 1; }
+  .navigation #js-open-menu {
+    display: none;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 28px; }
   .navigation .menu {
     padding: 12px;
     list-style: none;
-    font-weight: bold; }
+    font-weight: bold;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
   .navigation a {
     color: white;
     text-transform: uppercase; }
@@ -266,9 +276,19 @@ section.contact {
     line-height: 1.4; }
   .text h3:after, .text h3:before {
     display: block !important; }
+  #js-open-menu {
+    display: block !important; }
   .navigation.navigation-top {
     padding: 7px 12px;
-    font-size: .9em; }
+    font-size: .9em;
+    position: fixed; }
+    .navigation.navigation-top .container.flex {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
     .navigation.navigation-top .logo {
       text-align: center; }
     .navigation.navigation-top .container, .navigation.navigation-top .menu {
@@ -280,17 +300,32 @@ section.contact {
     .navigation.navigation-top li {
       margin-bottom: 10px; }
     .navigation.navigation-top .menu {
-      padding: 5px 0;
-      -webkit-box-orient: horizontal;
+      margin: 10px 0;
+      padding: 10px 0;
+      width: 100%;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -ms-flex-direction: column;
+      flex-direction: column;
       text-align: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      background-color: black;
+      -webkit-transform: translateX(-110%);
+      -ms-transform: translateX(-110%);
+      transform: translateX(-110%); }
+      .navigation.navigation-top .menu.animated {
+        -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        transform: translateX(0px); }
       .navigation.navigation-top .menu li:first-child {
         display: none; }
+      .navigation.navigation-top .menu li {
+        margin: 10px 0; }
+        .navigation.navigation-top .menu li a {
+          padding: 5px 0;
+          display: block; }
   section.contact .form, section.contact .map {
     width: 100%;
     padding-right: 0;

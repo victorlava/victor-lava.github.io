@@ -3,10 +3,20 @@
     padding: 24px;
     z-index: 1;
 
+    #js-open-menu {
+        display: none;
+        background: none;
+        border: 0;
+        outline: 0;
+        color: white;
+        font-size: 28px;
+    }
+
     .menu {
         padding: 12px;
         list-style: none;
         font-weight: bold;
+        transition: all 0.4s ease;
     }
 
     a {

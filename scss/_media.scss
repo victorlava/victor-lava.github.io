@@ -9,9 +9,17 @@
         display: block !important;
     }
 
+    #js-open-menu { display: block !important; }
+
     .navigation.navigation-top {
         padding: 7px 12px;
         font-size: .9em;
+        position: fixed;
+
+        .container.flex {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
         .logo {
             text-align: center;
@@ -30,11 +38,27 @@
         li { margin-bottom: 10px; }
 
         .menu {
-            padding: 5px 0;
-            flex-direction: row;
+            margin: 10px 0;
+            padding: 10px 0;
+            width: 100%;
+            flex-direction: column;
             text-align: center;
             justify-content: center;
+            background-color: black;
+            transform: translateX(-110%);
+
+            &.animated {
+                transform: translateX(0px);
+            }
+
             li:first-child { display: none; }
+            li {
+                margin: 10px 0;
+                a {
+                    padding: 5px 0;
+                    display: block;
+                }
+            }
         }
     }
 
