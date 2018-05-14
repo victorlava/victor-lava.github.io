@@ -43,6 +43,10 @@ section.carousel {
 
             }
 
+            &.small:hover:after {
+                line-height: 134px;
+            }
+
             img {
                 height: 100%;
 

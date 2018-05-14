@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <script type="text/javascript" src="js/script.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
 
@@ -19,10 +20,10 @@
                 </a>
 
                 <ul class="menu flex">
-                    <li class="active blue">
+                    <li>
                         <a href="#">Home</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">About us</a>
                     </li>
                     <li>
@@ -78,16 +79,16 @@
             <section class="carousel">
                 <div class="container">
                     <div class="feed flex">
-                        <div class="instagram hidden">
+                        <div class="instagram">
                             <img src="img/instagram-1.jpg" alt="">
                         </div>
-                        <div class="instagram hidden">
+                        <div class="instagram">
                             <img src="img/instagram-2.jpg" alt="">
                         </div>
-                        <div class="instagram hidden">
+                        <div class="instagram">
                             <img src="img/instagram-3.jpg" alt="">
                         </div>
-                        <div class="instagram hidden">
+                        <div class="instagram">
                             <img src="img/instagram-4.jpg" alt="">
                         </div>
                     </div>
@@ -98,7 +99,7 @@
                             <span>Follow us on instagram</span>
                         </a>
 
-                        <button id="follow" class="button">
+                        <button id="js-make-small" class="button">
                             <i class="fas fa-search-minus"></i>
                             <span>Make small</span>
                         </button>

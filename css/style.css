@@ -178,6 +178,8 @@ section.carousel {
         left: 6px;
         background-color: rgba(197, 48, 98, 0.85);
         position: absolute; }
+      section.carousel .feed .instagram.small:hover:after {
+        line-height: 134px; }
       section.carousel .feed .instagram img {
         height: 100%; }
 
