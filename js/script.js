@@ -4,12 +4,25 @@ var clickCounter = 0;
 
 $(document).ready(function() {
 
+
+    var test = {
+        title: 'test',
+        description: 'sdf'
+    }
+
+    console.log(JSON.stringify(test));
+
     $.ajax({
         type: "GET",
-        dataType: 'json',
-        url: "data/products.json",
+        url: "http://viktoraslava.lt",
         success: function(data, status) {
+
+            // var images = $.parseJSON(data);
             console.log(data);
+
+
+
+
         }
     })
 
