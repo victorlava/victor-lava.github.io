@@ -4,32 +4,50 @@ var clickCounter = 0;
 
 $(document).ready(function() {
 
-
-    var test = {
-        title: 'test',
-        description: 'sdf'
-    }
-
-    console.log(JSON.stringify(test));
-
-    $.ajax({
-        type: "GET",
-        url: "http://viktoraslava.lt",
-        success: function(data, status) {
-
-            // var images = $.parseJSON(data);
-            console.log(data);
-
-
-
-
-        }
-    })
-
     // 1.
     $('.navigation li').on('click', function() {
         $('.navigation li').removeClass('active');
         $(this).addClass('active');
+
+        var text = $(this).find('a').text();
+
+        if(text == 'Home') {
+
+            $.ajax({
+                type: "GET",
+                dataType: 'json',
+                url: "http://viktoraslava.lt/pamokos/jquery-practical-03/home.json",
+                success: function(data, status) {
+                    var h1 = $('<h1>'),
+                        h3 = $('<h3>');
+
+                    h1.text(data.title);
+                    h3.text(data.description);
+
+                    $('section.intro .text').html('').append(h1).append(h3);
+                }
+            })
+
+        } else if(text == 'About us') {
+
+            $.ajax({
+                type: "GET",
+                dataType: 'json',
+                url: "http://viktoraslava.lt/pamokos/jquery-practical-03/about.json",
+                success: function(data, status) {
+                    var h1 = $('<h1>'),
+                        p = $('<p>');
+
+                    h1.text(data.title);
+                    p.text(data.description);
+
+                    $('section.intro .text').html('').append(h1).append(p);
+                }
+            })
+
+        }
+
+
     });
 
     // 2.
