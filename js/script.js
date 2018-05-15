@@ -13,7 +13,11 @@ var clickCounter = 0;
         TIP: Naudokites šiandienos codepenais, viskas labai panašiai.
             Galite panaudoti html(), append(), text() metodus, taip pat
             jQuery elemento kūrimo komandą, pvz. $('<h1>');
- */
+
+*** EXTRA 1.1 Pridėti mygtuką "See our team", "about us" "puslapyje", kuris nuvestų iki
+              "team" sekcijos
+
+*/
 
 
 $(document).ready(function() {
