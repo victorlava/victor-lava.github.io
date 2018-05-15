@@ -1,6 +1,20 @@
 'use strict';
 var clickCounter = 0;
 
+/* 1. Jūsų tikslas yra įgyvendinti asinchroninį duomenų įkelimą vaikštant tarp "Home" ir
+      "About us" nuorodų. Tam reikia oanaudoti AJAX technologiją ir gauti duomenis iš
+      nuotolinio serverio JSON formatu. Reikia papildyti pirmajį kodo gabaliuką, kur ".navigation li" ...
+      Panaudoti control flow (if/else), nustatant ant kokios nuorodos vartotojas paspaudė.
+
+      Nuorodas į kurias reikia kreiptis:
+        - "Home" tekstui - http://viktoraslava.lt/pamokos/jquery-practical-03/home.json,
+        - "About us" tekstui - http://viktoraslava.lt/pamokos/jquery-practical-03/about.json
+
+        TIP: Naudokites šiandienos codepenais, viskas labai panašiai.
+            Galite panaudoti html(), append(), text() metodus, taip pat
+            jQuery elemento kūrimo komandą, pvz. $('<h1>');
+ */
+
 
 $(document).ready(function() {
 
@@ -9,43 +23,7 @@ $(document).ready(function() {
         $('.navigation li').removeClass('active');
         $(this).addClass('active');
 
-        var text = $(this).find('a').text();
-
-        if(text == 'Home') {
-
-            $.ajax({
-                type: "GET",
-                dataType: 'json',
-                url: "http://viktoraslava.lt/pamokos/jquery-practical-03/home.json",
-                success: function(data, status) {
-                    var h1 = $('<h1>'),
-                        h3 = $('<h3>');
-
-                    h1.text(data.title);
-                    h3.text(data.description);
-
-                    $('section.intro .text').html('').append(h1).append(h3);
-                }
-            })
-
-        } else if(text == 'About us') {
-
-            $.ajax({
-                type: "GET",
-                dataType: 'json',
-                url: "http://viktoraslava.lt/pamokos/jquery-practical-03/about.json",
-                success: function(data, status) {
-                    var h1 = $('<h1>'),
-                        p = $('<p>');
-
-                    h1.text(data.title);
-                    p.text(data.description);
-
-                    $('section.intro .text').html('').append(h1).append(p);
-                }
-            })
-
-        }
+        /* AJAX code */
 
 
     });
