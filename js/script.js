@@ -36,12 +36,20 @@ $(document).ready(function() {
                 url: "http://viktoraslava.lt/pamokos/jquery-practical-03/about.json",
                 success: function(data, status) {
                     var h1 = $('<h1>'),
-                        p = $('<p>');
+                        p = $('<p>'),
+                        button = $('<button id="js-team" class="button">');
 
                     h1.text(data.title);
                     p.text(data.description);
+                    button.text('See our team');
 
-                    $('section.intro .text').html('').append(h1).append(p);
+                    $('section.intro .text').html('').append(h1).append(p).append(button);
+
+                    $("#js-team").on('click', function() {
+                        $('html, body').animate({
+                            scrollTop: $(".team").offset().top
+                        }, 1000);
+                    });
                 }
             })
 
