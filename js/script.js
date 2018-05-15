@@ -4,6 +4,15 @@ var clickCounter = 0;
 
 $(document).ready(function() {
 
+    $.ajax({
+        type: "GET",
+        dataType: 'json',
+        url: "data/products.json",
+        success: function(data, status) {
+            console.log(data);
+        }
+    })
+
     // 1.
     $('.navigation li').on('click', function() {
         $('.navigation li').removeClass('active');
