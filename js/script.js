@@ -101,8 +101,8 @@ $(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
         e.preventDefault();
 
-        let img = $('<img width="25" src="/img/loader.gif">');
-        
+        var img = $('<img width="25" src="/img/loader.gif">');
+
         $('.contact #js-street').html('');
         $('.contact #js-street').append(img);
 
