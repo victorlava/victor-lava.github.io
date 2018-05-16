@@ -101,12 +101,19 @@ $(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
         e.preventDefault();
 
+        let img = $('<img width="25" src="/img/loader.gif">');
+        
+        $('.contact #js-street').html('');
+        $('.contact #js-street').append(img);
+
         $.ajax({
             method: 'GET',
             dataType: 'json',
             url: $(this).attr('action'),
             data: $(this).serialize(),
             success: function(data, status) {
+
+                $('.contact #js-street img').remove();
 
                 data.data.forEach(function(value, index) {
                     $('.contact #js-street').text(value.post_code + ' ' + value.address);
