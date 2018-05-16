@@ -101,13 +101,31 @@ $(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
         e.preventDefault();
 
-        $('section.contact').animate({
-            height: 0,
-            opacity: 0,
-            padding: 0
-        }, 1000, function() {
-            $(this).remove();
+        $.ajax({
+            method: 'GET',
+            dataType: 'json',
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(data, status) {
+
+                data.data.forEach(function(value, index) {
+                    $('.contact #js-street').text(value.post_code + ' ' + value.address);
+                })
+
+                if(data.data.length === 0) {
+                    $('.contact #js-street').text('No data');
+                }
+            }
         })
+
+
+        // $('section.contact').animate({
+        //     height: 0,
+        //     opacity: 0,
+        //     padding: 0
+        // }, 1000, function() {
+        //     $(this).remove();
+        // })
 
     });
 
