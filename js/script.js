@@ -1,6 +1,22 @@
 'use strict';
 var clickCounter = 0;
 
+/* 1. Perdaryti kontaktų forma, jog ji siųstų AJAX užklausą į postit API servisą.
+*      Forma turi turėti 3 laukelius, city, street ir number. Šią formą reikia išsiųsti
+*      adresu https://postit.lt/data/v2/ naudojant GET duomenų siuntimo formatą.
+*      Gautus duomenis sudėti į paragrafą einanti iškarto po google žemėlapio. Jei duomenų
+*      nėra - atvaizduoti tekstą "No data". Jei gaunate daugiau nei vieną rezultatą tai atvaizduoti
+*      tik vieną, patį paskutinį.
+*
+*      TIP: naudotis postit API dokumentaciją - https://postit.lt/API/v2/
+*      TIP: seną animaciją išjungti (5 punktas)
+*
+EXTRA 1.1 Uždėti animaciją, kuri parodytų, jog laukiama rezultato iš postit.
+*          Panaudoti .gif nuotraukėlę, kuri pridėta img/loader.gif direktorijoje.
+*
+*      TIP: susikurti img elementą su src atributu iki nuotraukos
+*
+*/
 
 $(document).ready(function() {
 
