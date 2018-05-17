@@ -9,17 +9,16 @@ var clickCounter = 0;
     Taip pat reikia nepamiršti įsidėti bootstrap.min.js biblioteką per script
     tagą į head dalį, bootstrap.min.js failą galite išsaugoti js direktorijoje.
 
-    1. Uždėti bootstrap'o tooltip'us ant žmonių vardo (h4 elementas)
-      TIP: skaityti dokumentaciją kaip tai padaryti
+   1. Uždėti bootstrap'o tooltip'us ant žmonių vardo (h4 elementas)
 
-   2. Įdėti bootstrap'o carousel modulį su 3 nuotraukomis.
-      TIP: skaityti dokumentaciją kaip tai padaryti
+   2. Įdėti bootstrap'o carousel modulį su 3 nuotraukomis, nuotraukas
+      rasite img direktorijoje.
 
 EXTRA 2.1 Išjungti carousel sustabdymą kai pelė yra ant carousel modulio
 
    3. Įdėti bootstrap'o tabus "service" sekcijoje, stilizuoti juos, jog jie
       pritaptų prie esamo dizaino.
-      TIP: skaityti dokumentaciją kaip tai padaryti, įsidėti _navs.scss failą
+      TIP: įsidėti _navs.scss failą
 
    4. Įgyvendinti formos validaciją naudojant http://www.formvalidator.net/index.html
       Naudotis svetainėje esančiu pavyzdžiu, kaip įsidiegti jQuery form validator įskiepį.
