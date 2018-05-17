@@ -244,6 +244,7 @@ section.contact {
   justify-content: center; }
 
 .button {
+  outline: 0;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 0px #dcdcdc;
   box-shadow: 0px 2px 0px #dcdcdc;
