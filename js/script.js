@@ -1,7 +1,12 @@
 'use strict';
 var clickCounter = 0;
 
-/*  Prieš pradedant darbus jum reikia atsisiųsti bootstrap'o sass versiją
+/*
+    Pirmadieniui įsirašyti Photoshop trialą - https://creative.adobe.com/products/download/photoshop?promoid=61PM825Y&mv=other
+
+    Užduoties pavyzdys - http://viktoraslava.lt/pamokos/jquery-practical-05/index.html#
+
+    Prieš pradedant darbus jum reikia atsisiųsti bootstrap'o sass versiją
     ir visus sass failiukus įsidėti į scss direktoriją. Tuomet į style.scss
     failą įtraukti bootstrap.scss failą su import taisykle. Bootstrap
     modulius, kurių nenaudosite reikia užkomentuoti bootstrap.scss faile.
