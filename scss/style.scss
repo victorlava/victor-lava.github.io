@@ -18,6 +18,7 @@ $font-size-h3: $font-size-base * 1.42;
 $font-size-h4: $font-size-base * 1.28;
 
 
+@import '_bootstrap';
 @import '_mixins';
 @import '_global';
 @import '_helpers';
@@ -30,3 +31,4 @@ $font-size-h4: $font-size-base * 1.28;
 @import '_button';
 @import '_footer';
 @import '_media';
+@import '_services';

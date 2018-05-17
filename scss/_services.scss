@@ -1,0 +1,24 @@
+section.services {
+    padding-bottom: 40px;
+    min-height: 400px;
+
+    .container {
+        justify-content: center;
+    }
+
+    .nav {
+
+    }
+
+    .tab-content {
+        width: 60%;
+        padding-left: 50px;
+        i {
+            float: left;
+            padding-right: 20px;
+            // display:inline-block;
+        }
+    }
+
+
+}
